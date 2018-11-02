@@ -1,0 +1,3697 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Smartparens cheetsheet · Clojure development with Spacemacs & Cider</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lisp-state.html" />
+    
+    
+    <link rel="prev" href="smartparens-strict-mode.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://spacemacs.org/" target="_blank" class="custom-link">Spacemacs</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://practicalli.github.io" target="_blank" class="custom-link">Practical.li</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../why-spacemacs/">
+            
+                <a href="../why-spacemacs/">
+            
+                    
+                    Why Spacemacs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../why-spacemacs/extensive-language-support.html">
+            
+                <a href="../why-spacemacs/extensive-language-support.html">
+            
+                    
+                    Extensive Language Support
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../why-spacemacs/layers.html">
+            
+                <a href="../why-spacemacs/layers.html">
+            
+                    
+                    Simple Layers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.2.1" data-path="../why-spacemacs/clojure-layer.html">
+            
+                <a href="../why-spacemacs/clojure-layer.html">
+            
+                    
+                    Clojure Layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../why-spacemacs/mnemonic-menu.html">
+            
+                <a href="../why-spacemacs/mnemonic-menu.html">
+            
+                    
+                    Mnemonic Menu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../why-spacemacs/states.html">
+            
+                <a href="../why-spacemacs/states.html">
+            
+                    
+                    A State for everything
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../why-spacemacs/helm.html">
+            
+                <a href="../why-spacemacs/helm.html">
+            
+                    
+                    Discoverable
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.5.1" data-path="../why-spacemacs/helm-transient-state.html">
+            
+                <a href="../why-spacemacs/helm-transient-state.html">
+            
+                    
+                    Helm Transient State
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.6" data-path="../why-spacemacs/transient-state-menus.html">
+            
+                <a href="../why-spacemacs/transient-state-menus.html">
+            
+                    
+                    Transient state menus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.7" data-path="../why-spacemacs/structured-editing.html">
+            
+                <a href="../why-spacemacs/structured-editing.html">
+            
+                    
+                    Structured editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.8" data-path="../why-spacemacs/project-file-navigation.html">
+            
+                <a href="../why-spacemacs/project-file-navigation.html">
+            
+                    
+                    Project & File navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.9" data-path="../why-spacemacs/layouts.html">
+            
+                <a href="../why-spacemacs/layouts.html">
+            
+                    
+                    Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../introduction/contributing.html">
+            
+                <a href="../introduction/contributing.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../before-you-start/">
+            
+                <a href="../before-you-start/">
+            
+                    
+                    Before you start
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../before-you-start/install-emacs.html">
+            
+                <a href="../before-you-start/install-emacs.html">
+            
+                    
+                    Install Emacs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../before-you-start/install-clojure.html">
+            
+                <a href="../before-you-start/install-clojure.html">
+            
+                    
+                    Install Clojure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install-spacemacs/">
+            
+                <a href="../install-spacemacs/">
+            
+                    
+                    Install Spacemacs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install-spacemacs/holy-or-evil-editing.html">
+            
+                <a href="../install-spacemacs/holy-or-evil-editing.html">
+            
+                    
+                    Holy or Evil Editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../install-spacemacs/clojure-layer.html">
+            
+                <a href="../install-spacemacs/clojure-layer.html">
+            
+                    
+                    Add Clojure layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../install-spacemacs/enhance-clojure-experience.html">
+            
+                <a href="../install-spacemacs/enhance-clojure-experience.html">
+            
+                    
+                    Enhance Clojure experience
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../install-spacemacs/smartparens.html">
+            
+                <a href="../install-spacemacs/smartparens.html">
+            
+                    
+                    Smartparens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../install-spacemacs/evil-structural-editing.html">
+            
+                <a href="../install-spacemacs/evil-structural-editing.html">
+            
+                    
+                    Evil Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../install-spacemacs/fancify-symbols.html">
+            
+                <a href="../install-spacemacs/fancify-symbols.html">
+            
+                    
+                    Clojure Fancify Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../install-spacemacs/change-font.html">
+            
+                <a href="../install-spacemacs/change-font.html">
+            
+                    
+                    Font size and Zooming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../install-spacemacs/maximised-full-screen.html">
+            
+                <a href="../install-spacemacs/maximised-full-screen.html">
+            
+                    
+                    Open Maximised / Full Screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../install-spacemacs/themes.html">
+            
+                <a href="../install-spacemacs/themes.html">
+            
+                    
+                    Themes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../install-spacemacs/add-another-theme.html">
+            
+                <a href="../install-spacemacs/add-another-theme.html">
+            
+                    
+                    Add another theme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../install-spacemacs/line-numbers.html">
+            
+                <a href="../install-spacemacs/line-numbers.html">
+            
+                    
+                    Line Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../spacemacs-basics/">
+            
+                <a href="../spacemacs-basics/">
+            
+                    
+                    Spacemacs Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../spacemacs-basics/emacs-basics.html">
+            
+                <a href="../spacemacs-basics/emacs-basics.html">
+            
+                    
+                    Emacs Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../spacemacs-basics/emacs-quick-reference.html">
+            
+                <a href="../spacemacs-basics/emacs-quick-reference.html">
+            
+                    
+                    Emacs Quick Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../spacemacs-basics/vim-basics.html">
+            
+                <a href="../spacemacs-basics/vim-basics.html">
+            
+                    
+                    Vim Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../spacemacs-basics/speaking-vim.html">
+            
+                <a href="../spacemacs-basics/speaking-vim.html">
+            
+                    
+                    Speaking Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../spacemacs-basics/spacemacs-vim.html">
+            
+                <a href="../spacemacs-basics/spacemacs-vim.html">
+            
+                    
+                    Spacemacs Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../spacemacs-basics/vim-quick-reference.html">
+            
+                <a href="../spacemacs-basics/vim-quick-reference.html">
+            
+                    
+                    Vim Quick Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../spacemacs-basics/vim-tips-for-developers.html">
+            
+                <a href="../spacemacs-basics/vim-tips-for-developers.html">
+            
+                    
+                    Vim Tips for developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../repl-driven-development/">
+            
+                <a href="../repl-driven-development/">
+            
+                    
+                    REPL Driven Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../create-a-project/">
+            
+                <a href="../create-a-project/">
+            
+                    
+                    Create a Clojure Project
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../create-a-project/using-emacs-eshell.html">
+            
+                <a href="../create-a-project/using-emacs-eshell.html">
+            
+                    
+                    Using Emacs Eshell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../working-with-projects/">
+            
+                <a href="../working-with-projects/">
+            
+                    
+                    Working with Projects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../working-with-projects/open-and-create-files.html">
+            
+                <a href="../working-with-projects/open-and-create-files.html">
+            
+                    
+                    Open and Create Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../working-with-projects/neotree.html">
+            
+                <a href="../working-with-projects/neotree.html">
+            
+                    
+                    NeoTree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../working-with-projects/ranger.html">
+            
+                <a href="../working-with-projects/ranger.html">
+            
+                    
+                    Ranger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../working-with-projects/managing-buffers.html">
+            
+                <a href="../working-with-projects/managing-buffers.html">
+            
+                    
+                    Managing Buffers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../working-with-projects/tidying-up-buffers.html">
+            
+                <a href="../working-with-projects/tidying-up-buffers.html">
+            
+                    
+                    Tidying up Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../working-with-projects/managing-windows.html">
+            
+                <a href="../working-with-projects/managing-windows.html">
+            
+                    
+                    Managing Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../working-with-projects/layouts.html">
+            
+                <a href="../working-with-projects/layouts.html">
+            
+                    
+                    Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../clojure-repl/">
+            
+                <a href="../clojure-repl/">
+            
+                    
+                    Clojure Repl
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../clojure-repl/jack-in.html">
+            
+                <a href="../clojure-repl/jack-in.html">
+            
+                    
+                    Start a REPL - Jack-In
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../clojure-repl/what-does-jackin-do.html">
+            
+                <a href="../clojure-repl/what-does-jackin-do.html">
+            
+                    
+                    What does jack-in do
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../clojure-repl/connect-to-running-repl.html">
+            
+                <a href="../clojure-repl/connect-to-running-repl.html">
+            
+                    
+                    Connect to existing REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../clojure-repl/switching-to-repl.html">
+            
+                <a href="../clojure-repl/switching-to-repl.html">
+            
+                    
+                    Switching to REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../clojure-repl/show-repl-on-connect.html">
+            
+                <a href="../clojure-repl/show-repl-on-connect.html">
+            
+                    
+                    Show REPL Buffer on connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../clojure-repl/repl-command-menu.html">
+            
+                <a href="../clojure-repl/repl-command-menu.html">
+            
+                    
+                    REPL Command Menu
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.5.1" data-path="../clojure-repl/repl-history.html">
+            
+                <a href="../clojure-repl/repl-history.html">
+            
+                    
+                    REPL History
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../clojure-repl/reset-the-repl.html">
+            
+                <a href="../clojure-repl/reset-the-repl.html">
+            
+                    
+                    Reset the REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../evaluating-clojure/">
+            
+                <a href="../evaluating-clojure/">
+            
+                    
+                    Evaluating Clojure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../evaluating-clojure/namespace.html">
+            
+                <a href="../evaluating-clojure/namespace.html">
+            
+                    
+                    Evaluate Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../evaluating-clojure/expressions.html">
+            
+                <a href="../evaluating-clojure/expressions.html">
+            
+                    
+                    Evaluate Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../evaluating-clojure/undefine.html">
+            
+                <a href="../evaluating-clojure/undefine.html">
+            
+                    
+                    Un-define names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../evaluating-clojure/enlighten.html">
+            
+                <a href="../evaluating-clojure/enlighten.html">
+            
+                    
+                    Enlighten
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../evaluating-clojure/inspect.html">
+            
+                <a href="../evaluating-clojure/inspect.html">
+            
+                    
+                    Inspect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../navigating-code/">
+            
+                <a href="../navigating-code/">
+            
+                    
+                    Navigating code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../navigating-code/namespaces.html">
+            
+                <a href="../navigating-code/namespaces.html">
+            
+                    
+                    Navigating Namespaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../navigating-code/expressions.html">
+            
+                <a href="../navigating-code/expressions.html">
+            
+                    
+                    Navigating Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../navigating-code/code-folding.html">
+            
+                <a href="../navigating-code/code-folding.html">
+            
+                    
+                    Code Folding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../editing/">
+            
+                <a href="../editing/">
+            
+                    
+                    Editing - Vim and iedit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../editing/iedit.html">
+            
+                <a href="../editing/iedit.html">
+            
+                    
+                    iedit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../editing/iedit-a-function.html">
+            
+                <a href="../editing/iedit-a-function.html">
+            
+                    
+                    iedit a function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../editing/iedit-find-replace.html">
+            
+                <a href="../editing/iedit-find-replace.html">
+            
+                    
+                    iedit find replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../editing/iedit-replace-multiple-words.html">
+            
+                <a href="../editing/iedit-replace-multiple-words.html">
+            
+                    
+                    iedit replace multiple words
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../editing/narrowing.html">
+            
+                <a href="../editing/narrowing.html">
+            
+                    
+                    Narrowing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../editing/replacing-text-across-fiiles.md">
+            
+                <a href="../editing/replacing-text-across-fiiles.md">
+            
+                    
+                    Replace text across files
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Structured Editing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="smartparens.html">
+            
+                <a href="smartparens.html">
+            
+                    
+                    Smartparens
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1.1" data-path="smartparens-strict-mode.html">
+            
+                <a href="smartparens-strict-mode.html">
+            
+                    
+                    Smartparens Strict Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12.1.2" data-path="smartparens-cheet-sheet.html">
+            
+                <a href="smartparens-cheet-sheet.html">
+            
+                    
+                    Smartparens cheetsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="lisp-state.html">
+            
+                <a href="lisp-state.html">
+            
+                    
+                    Lisp State
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.2.1" data-path="lisp-state-wrap-unwrap.html">
+            
+                <a href="lisp-state-wrap-unwrap.html">
+            
+                    
+                    Wrap Unwrap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.2" data-path="lisp-state-slurp-barf.html">
+            
+                <a href="lisp-state-slurp-barf.html">
+            
+                    
+                    Slurp Barf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.3" data-path="lisp-state-deleting.html">
+            
+                <a href="lisp-state-deleting.html">
+            
+                    
+                    Deleting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.4" data-path="lisp-state-splicing.html">
+            
+                <a href="lisp-state-splicing.html">
+            
+                    
+                    Splicing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="classic-emacs.html">
+            
+                <a href="classic-emacs.html">
+            
+                    
+                    Classic Emacs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" data-path="paredit-keybindings.html">
+            
+                <a href="paredit-keybindings.html">
+            
+                    
+                    Paredit keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.2" data-path="paredit.html">
+            
+                <a href="paredit.html">
+            
+                    
+                    Using Paredit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.3" data-path="emacs-killing-code-softly.html">
+            
+                <a href="emacs-killing-code-softly.html">
+            
+                    
+                    Paredit: Killing code softly
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../snippets/">
+            
+                <a href="../snippets/">
+            
+                    
+                    Snippets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../snippets/clojure-snippets.html">
+            
+                <a href="../snippets/clojure-snippets.html">
+            
+                    
+                    Clojure Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../snippets/add-your-own-snippets.html">
+            
+                <a href="../snippets/add-your-own-snippets.html">
+            
+                    
+                    Add your own Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../snippets/autocompletion.html">
+            
+                <a href="../snippets/autocompletion.html">
+            
+                    
+                    Autocompletion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../linting/">
+            
+                <a href="../linting/">
+            
+                    
+                    Linting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../linting/joker.html">
+            
+                <a href="../linting/joker.html">
+            
+                    
+                    Joker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../linting/eastwood.html">
+            
+                <a href="../linting/eastwood.html">
+            
+                    
+                    Eastwood
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../clj-refactor/">
+            
+                <a href="../clj-refactor/">
+            
+                    
+                    Refactor code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../clj-refactor/managing-library-dependencies.html">
+            
+                <a href="../clj-refactor/managing-library-dependencies.html">
+            
+                    
+                    Managing Library Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../clj-refactor/managing-namespaces.html">
+            
+                <a href="../clj-refactor/managing-namespaces.html">
+            
+                    
+                    Managing Namespaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../clj-refactor/forms.html">
+            
+                <a href="../clj-refactor/forms.html">
+            
+                    
+                    Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../clj-refactor/collections.html">
+            
+                <a href="../clj-refactor/collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../clj-refactor/extracting.html">
+            
+                <a href="../clj-refactor/extracting.html">
+            
+                    
+                    Extracting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../clj-refactor/formatting-code.html">
+            
+                <a href="../clj-refactor/formatting-code.html">
+            
+                    
+                    Formatting Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../documentation/">
+            
+                <a href="../documentation/">
+            
+                    
+                    Documentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../documentation/cider-doc.html">
+            
+                <a href="../documentation/cider-doc.html">
+            
+                    
+                    Cider doc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../documentation/grimoire.html">
+            
+                <a href="../documentation/grimoire.html">
+            
+                    
+                    Grimoire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../documentation/javadoc.html">
+            
+                <a href="../documentation/javadoc.html">
+            
+                    
+                    Javadoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../documentation/comments.html">
+            
+                <a href="../documentation/comments.html">
+            
+                    
+                    Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../documentation/snippets.html">
+            
+                <a href="../documentation/snippets.html">
+            
+                    
+                    Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../testing/">
+            
+                <a href="../testing/">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../testing/run-tests.html">
+            
+                <a href="../testing/run-tests.html">
+            
+                    
+                    Run tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../magit/">
+            
+                <a href="../magit/">
+            
+                    
+                    MaGit Version Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../magit/create-local-repository.html">
+            
+                <a href="../magit/create-local-repository.html">
+            
+                    
+                    Create local repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../magit/status.html">
+            
+                <a href="../magit/status.html">
+            
+                    
+                    Git Status
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.2.1" data-path="../magit/status-fullscreen.html">
+            
+                <a href="../magit/status-fullscreen.html">
+            
+                    
+                    MaGit Status Fullscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../magit/local-commits.html">
+            
+                <a href="../magit/local-commits.html">
+            
+                    
+                    Local commits
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../magit/remote-repositories.html">
+            
+                <a href="../magit/remote-repositories.html">
+            
+                    
+                    Remote repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../magit/stashing.html">
+            
+                <a href="../magit/stashing.html">
+            
+                    
+                    Stashing changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../magit/changing-history.html">
+            
+                <a href="../magit/changing-history.html">
+            
+                    
+                    Changing History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../magit/rebasing.html">
+            
+                <a href="../magit/rebasing.html">
+            
+                    
+                    Rebasing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.8" data-path="../magit/blame.html">
+            
+                <a href="../magit/blame.html">
+            
+                    
+                    Git blame
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.9" data-path="../magit/timemachine.html">
+            
+                <a href="../magit/timemachine.html">
+            
+                    
+                    Timemachine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.10" data-path="../magit/testing-pull-requests.html">
+            
+                <a href="../magit/testing-pull-requests.html">
+            
+                    
+                    Testing Pull Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.11" data-path="../magit/version-highlighting.html">
+            
+                <a href="../magit/version-highlighting.html">
+            
+                    
+                    Highlight Changes in file
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../github/">
+            
+                <a href="../github/">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../github/gists.html">
+            
+                <a href="../github/gists.html">
+            
+                    
+                    Gists
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../debugging/">
+            
+                <a href="../debugging/">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" data-path="../debugging/inspect-values.html">
+            
+                <a href="../debugging/inspect-values.html">
+            
+                    
+                    Inspect values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2" data-path="../debugging/sayid-debugger.html">
+            
+                <a href="../debugging/sayid-debugger.html">
+            
+                    
+                    Sayid debugger
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../markdown-mode/">
+            
+                <a href="../markdown-mode/">
+            
+                    
+                    Markdown documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../org-mode/">
+            
+                <a href="../org-mode/">
+            
+                    
+                    Org-mode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" data-path="../org-mode/headings.html">
+            
+                <a href="../org-mode/headings.html">
+            
+                    
+                    Headings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.2" data-path="../org-mode/todo-states.html">
+            
+                <a href="../org-mode/todo-states.html">
+            
+                    
+                    TODO States
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3" data-path="../org-mode/todo-states-customise.html">
+            
+                <a href="../org-mode/todo-states-customise.html">
+            
+                    
+                    Customise TODO States
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4" data-path="../org-mode/get-things-done.html">
+            
+                <a href="../org-mode/get-things-done.html">
+            
+                    
+                    Get Things Done
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5" data-path="../org-mode/tables.html">
+            
+                <a href="../org-mode/tables.html">
+            
+                    
+                    Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.6" data-path="../org-mode/code-blocks.html">
+            
+                <a href="../org-mode/code-blocks.html">
+            
+                    
+                    Code Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.7" data-path="../org-mode/yasnippets.html">
+            
+                <a href="../org-mode/yasnippets.html">
+            
+                    
+                    Yasnippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.8" data-path="../org-mode/org-mode-tweaks.html">
+            
+                <a href="../org-mode/org-mode-tweaks.html">
+            
+                    
+                    Org-mode tweaks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.9" data-path="../org-mode/literate-programming/">
+            
+                <a href="../org-mode/literate-programming/">
+            
+                    
+                    Literate Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../clojurescript/">
+            
+                <a href="../clojurescript/">
+            
+                    
+                    Clojurescript Overview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.1" data-path="../clojurescript/why-clojurescript.html">
+            
+                <a href="../clojurescript/why-clojurescript.html">
+            
+                    
+                    Why Clojurescript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.2" data-path="../clojurescript/build-process.html">
+            
+                <a href="../clojurescript/build-process.html">
+            
+                    
+                    Build Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../figwheel/">
+            
+                <a href="../figwheel/">
+            
+                    
+                    Figwheel Overview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="../figwheel/clojurescript-repl.html">
+            
+                <a href="../figwheel/clojurescript-repl.html">
+            
+                    
+                    ClojureScript REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.2" data-path="../figwheel/live-code-reload.html">
+            
+                <a href="../figwheel/live-code-reload.html">
+            
+                    
+                    Live Code Reload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.3" data-path="../figwheel/live-css-reload.html">
+            
+                <a href="../figwheel/live-css-reload.html">
+            
+                    
+                    Live CSS Reload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4" data-path="../figwheel/error-reporting.html">
+            
+                <a href="../figwheel/error-reporting.html">
+            
+                    
+                    Error Reporting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.5" data-path="../figwheel/multiple-environments.html">
+            
+                <a href="../figwheel/multiple-environments.html">
+            
+                    
+                    Multiple Environments (repl)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.6" data-path="../figwheel/static-content.html">
+            
+                <a href="../figwheel/static-content.html">
+            
+                    
+                    static content
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.7" data-path="../figwheel/heads-up-display.html">
+            
+                <a href="../figwheel/heads-up-display.html">
+            
+                    
+                    Heads up display
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.8" data-path="../figwheel/braodcasting.html">
+            
+                <a href="../figwheel/braodcasting.html">
+            
+                    
+                    Broadcasting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.9" data-path="../figwheel/other-options.html">
+            
+                <a href="../figwheel/other-options.html">
+            
+                    
+                    Other Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../using-figwheel/">
+            
+                <a href="../using-figwheel/">
+            
+                    
+                    Using Figwheel
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.25.1" data-path="../using-figwheel/chestnut-template.html">
+            
+                <a href="../using-figwheel/chestnut-template.html">
+            
+                    
+                    Chestnut Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.2" data-path="../using-figwheel/starting-chestnut-terminal.html">
+            
+                <a href="../using-figwheel/starting-chestnut-terminal.html">
+            
+                    
+                    Starting Figwheel (Terminal)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.3" data-path="../using-figwheel/starting-chestnut-emacs.html">
+            
+                <a href="../using-figwheel/starting-chestnut-emacs.html">
+            
+                    
+                    Starting Figwheel (Emacs)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../clojurescript/additional-features.html">
+            
+                <a href="../clojurescript/additional-features.html">
+            
+                    
+                    Additional Features
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.26.1" data-path="../clojurescript/css-rainbow-colors.html">
+            
+                <a href="../clojurescript/css-rainbow-colors.html">
+            
+                    
+                    CSS Rainbow Colors
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../troubleshooting/">
+            
+                <a href="../troubleshooting/">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="../writing-emacs-lisp/">
+            
+                <a href="../writing-emacs-lisp/">
+            
+                    
+                    Writing Emacs Lisp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="../reference/">
+            
+                <a href="../reference/">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.29.1" data-path="../reference/vim/getting-comfortable.html">
+            
+                <a href="../reference/vim/getting-comfortable.html">
+            
+                    
+                    Vim - Getting Comfortable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.2" data-path="../reference/keybindings/">
+            
+                <a href="../reference/keybindings/">
+            
+                    
+                    Keybindings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.29.2.1" data-path="../reference/keybindings/spacemacs-keybindings.md">
+            
+                <a href="../reference/keybindings/spacemacs-keybindings.md">
+            
+                    
+                    Spacemacs Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.2.2" data-path="../reference/keybindings/vim-keybindings.html">
+            
+                <a href="../reference/keybindings/vim-keybindings.html">
+            
+                    
+                    Vim Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.2.3" data-path="../reference/keybindings/emacs-keybindings.md">
+            
+                <a href="../reference/keybindings/emacs-keybindings.md">
+            
+                    
+                    Emacs Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.2.4" data-path="../reference/keybindings/emacs-keybindings.md">
+            
+                <a href="../reference/keybindings/emacs-keybindings.md">
+            
+                    
+                    Emacs Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.2.5" data-path="../reference/keybindings/custom-keybindings.md">
+            
+                <a href="../reference/keybindings/custom-keybindings.md">
+            
+                    
+                    Custom Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.3" data-path="../reference/silversearcher-ag.html">
+            
+                <a href="../reference/silversearcher-ag.html">
+            
+                    
+                    Silver Searcher - ag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.4" data-path="../reference/projectile.html">
+            
+                <a href="../reference/projectile.html">
+            
+                    
+                    Projectile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.5" data-path="../reference/basic-syntax.html">
+            
+                <a href="../reference/basic-syntax.html">
+            
+                    
+                    Basic Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.6" data-path="../reference/strings.html">
+            
+                <a href="../reference/strings.html">
+            
+                    
+                    Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.7" data-path="../reference/maths.html">
+            
+                <a href="../reference/maths.html">
+            
+                    
+                    Maths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.8" data-path="../reference/data-structures.html">
+            
+                <a href="../reference/data-structures.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.9" data-path="../reference/functions.html">
+            
+                <a href="../reference/functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.10" data-path="../reference/control-flow.html">
+            
+                <a href="../reference/control-flow.html">
+            
+                    
+                    Control flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.11" data-path="../reference/local-assignement.html">
+            
+                <a href="../reference/local-assignement.html">
+            
+                    
+                    Local Assignment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="../misc/">
+            
+                <a href="../misc/">
+            
+                    
+                    Misc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.30.1" data-path="../misc/artist-mode.html">
+            
+                <a href="../misc/artist-mode.html">
+            
+                    
+                    Artist mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30.2" data-path="../misc/unicode-characters.html">
+            
+                <a href="../misc/unicode-characters.html">
+            
+                    
+                    Unicode Characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="../contributors.html">
+            
+                <a href="../contributors.html">
+            
+                    
+                    Contributors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../introduction/about-this-workshop.html">
+            
+                <a href="../introduction/about-this-workshop.html">
+            
+                    
+                    About this workshop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.32.1" data-path="../introduction/workshop-conventions.html">
+            
+                <a href="../introduction/workshop-conventions.html">
+            
+                    
+                    Workshop conventions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.2" data-path="../introduction/sample-configuration.html">
+            
+                <a href="../introduction/sample-configuration.html">
+            
+                    
+                    Sample Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.3" data-path="../introduction/additional-resources.html">
+            
+                <a href="../introduction/additional-resources.html">
+            
+                    
+                    Additional resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="../work-in-progress.html">
+            
+                <a href="../work-in-progress.html">
+            
+                    
+                    Work in progress - messy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Smartparens cheetsheet</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="smartparens-cheetsheet">Smartparens cheetsheet</h1>
+<p><code>SPC SPC sp-cheet-sheet</code>  lists all the smartparens commands available</p>
+<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="break-out-common-commands-into-their-own-sections-with-examples"><i class="fa fa-bookmark"></i> Break out common commands into their own sections with examples</h3></div><div class="panel-body"></div></div>
+<pre><code>(sp-cheat-sheet &amp;optional ARG)
+</code></pre><p>Generate a cheat sheet of all the smartparens interactive functions.</p>
+<p>Without a prefix argument, print only the short documentation and examples.</p>
+<p>With non-nil prefix argument ARG, show the full documentation for each function.</p>
+<p>You can follow the links to the function or variable help page.
+To get back to the full list, use [.</p>
+<p>You can use &#x2018;beginning-of-defun&#x2019; and &#x2018;end-of-defun&#x2019; to jump to
+the previous/next entry.</p>
+<p>Examples are fontified using the &#x2018;font-lock-string-face&#x2019; for
+better orientation.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<pre><code>(sp-describe-system)
+</code></pre><p>Describe user&#x2019;s system.</p>
+<p>The output of this function can be used in bug reports.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<pre><code>(smartparens-strict-mode &amp;optional ARG)
+</code></pre><p>Toggle the strict smartparens mode.</p>
+<p>When strict mode is active, &#x2018;delete-char&#x2019;, &#x2018;kill-word&#x2019; and their
+backward variants will skip over the pair delimiters in order to
+keep the structure always valid (the same way as &#x2018;paredit-mode&#x2019;
+does).  This is accomplished by remapping them to
+&#x2018;sp-delete-char&#x2019; and &#x2018;sp-kill-word&#x2019;.  There is also function
+&#x2018;sp-kill-symbol&#x2019; that deletes symbols instead of words, otherwise
+working exactly the same (it is not bound to any key by default).</p>
+<p>When strict mode is active, this is indicated with &quot;/s&quot;
+after the smartparens indicator in the mode list.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<pre><code>(smartparens-global-strict-mode &amp;optional ARG)
+</code></pre><p>Toggle Smartparens-Strict mode in all buffers.
+With prefix ARG, enable Smartparens-Global-Strict mode if ARG is positive;
+otherwise, disable it.  If called from Lisp, enable the mode if
+ARG is omitted or nil.</p>
+<p>Smartparens-Strict mode is enabled in all buffers where
+&#x2018;turn-on-smartparens-strict-mode&#x2019; would do it.
+See &#x2018;smartparens-strict-mode&#x2019; for more information on Smartparens-Strict mode.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<pre><code>(turn-on-smartparens-strict-mode)
+</code></pre><p>Turn on &#x2018;smartparens-strict-mode&#x2019;.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<pre><code>(turn-off-smartparens-strict-mode)
+</code></pre><p>Turn off &#x2018;smartparens-strict-mode&#x2019;.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-prefix-tag-object is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-prefix-tag-object &amp;optional ARG)
+</code></pre><p>Read the command and invoke it on the next tag object.</p>
+<p>If you specify a regular emacs prefix argument this is passed to
+the executed command.  Therefore, executing
+&quot;SPC u 2 M-x sp-prefix-tag-object M-x sp-forward-sexp&quot; will move two tag
+expressions forward, ignoring possible symbols or paired
+expressions inbetween.</p>
+<p>Tag object is anything delimited by sgml tag.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-prefix-pair-object is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-prefix-pair-object &amp;optional ARG)
+</code></pre><p>Read the command and invoke it on the next pair object.</p>
+<p>If you specify a regular emacs prefix argument this is passed to
+the executed command.  Therefore, executing
+&quot;SPC u 2 M-x sp-prefix-pair-object M-x sp-forward-sexp&quot; will move two paired
+expressions forward, ignoring possible symbols inbetween.</p>
+<p>Pair object is anything delimited by pairs from &#x2018;sp-pair-list&#x2019;.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-prefix-symbol-object is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-prefix-symbol-object &amp;optional ARG)
+</code></pre><p>Read the command and invoke it on the next pair object.</p>
+<p>If you specify a regular emacs prefix argument this is passed to
+the executed command.  Therefore, executing
+&quot;SPC u 2 M-x sp-prefix-symbol-object M-x sp-forward-sexp&quot; will move two symbols
+forward, ignoring any structure.</p>
+<p>Symbol is defined as a chunk of text recognized by
+&#x2018;sp-forward-symbol&#x2019;.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-prefix-save-excursion is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-prefix-save-excursion &amp;optional ARG)
+</code></pre><p>Execute the command keeping the point fixed.</p>
+<p>If you specify a regular emacs prefix argument this is passed to
+the executed command.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-narrow-to-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-narrow-to-sexp ARG)
+</code></pre><p>Make text outside current balanced expression invisible.
+A numeric arg specifies to move up by that many enclosing expressions.</p>
+<p>See also &#x2018;narrow-to-region&#x2019; and &#x2018;narrow-to-defun&#x2019;.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-forward-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-forward-sexp &amp;optional ARG)
+</code></pre><p>  |(foo bar baz)   -&gt; (foo bar baz)|</p>
+<p>  (|foo bar baz)   -&gt; (foo| bar baz)</p>
+<p>  (|foo bar baz)   -&gt; (foo bar| baz) ;; 2</p>
+<p>  (foo (bar baz|)) -&gt; (foo (bar baz)|)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-backward-sexp &amp;optional ARG)
+</code></pre><p>  (foo bar baz)|   -&gt; |(foo bar baz)</p>
+<p>  (foo| bar baz)   -&gt; (|foo bar baz)</p>
+<p>  (foo bar| baz)   -&gt; (|foo bar baz) ;; 2</p>
+<p>  (|(foo bar) baz) -&gt; ((|foo bar) baz)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-next-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-next-sexp &amp;optional ARG)
+</code></pre><p>  ((foo) |bar (baz quux)) -&gt; ((foo) bar |(baz quux))</p>
+<p>  ((foo) bar |(baz quux)) -&gt; |((foo) bar (baz quux))</p>
+<p>and with non-nil &#x2018;sp-navigate-interactive-always-progress-point&#x2019;</p>
+<p>  (f|oo bar) -&gt; (foo |bar)</p>
+<p>  ((fo|o) (bar)) -&gt; ((foo) |(bar))</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-previous-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-previous-sexp &amp;optional ARG)
+</code></pre><p>  ((foo) bar| (baz quux)) -&gt; ((foo)| bar (baz quux))</p>
+<p>  ((foo)| bar (baz quux)) -&gt; ((foo) bar (baz quux))|</p>
+<p>and if &#x2018;sp-navigate-interactive-always-progress-point&#x2019; is non-nil</p>
+<p>  (foo b|ar baz) -&gt; (foo| bar baz)</p>
+<p>  (foo (b|ar baz)) -&gt; (foo| (bar baz))</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-forward-parallel-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-forward-parallel-sexp &amp;optional ARG)
+</code></pre><p>Move forward across one balanced expressions at the same depth.</p>
+<p>If calling &#x2018;sp-forward-sexp&#x2019; at point would result in raising a
+level up, loop back to the first expression at current level,
+that is the first child of the enclosing sexp as defined by
+&#x2018;sp-get-enclosing-sexp&#x2019;.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-parallel-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-backward-parallel-sexp &amp;optional ARG)
+</code></pre><p>Move backward across one balanced expressions at the same depth.</p>
+<p>If calling &#x2018;sp-backward-sexp&#x2019; at point would result in raising a
+level up, loop back to the last expression at current level, that
+is the last child of the enclosing sexp as defined by
+&#x2018;sp-get-enclosing-sexp&#x2019;.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-down-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-down-sexp &amp;optional ARG)
+</code></pre><p>  |foo (bar (baz quux)) -&gt; foo (|bar (baz quux))</p>
+<p>  |foo (bar (baz quux)) -&gt; foo (bar (|baz quux)) ;; 2</p>
+<p>  |foo (bar (baz (quux) blab)) -&gt; foo (bar (baz (|quux) blab)) ;; SPC u</p>
+<p>  (foo (bar baz) |quux) -&gt; (|foo (bar baz) quux)</p>
+<p>  (blab foo |(bar baz) quux) -&gt; (|blab foo (bar baz) quux) ;; SPC u SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-down-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-backward-down-sexp &amp;optional ARG)
+</code></pre><p>  foo (bar (baz quux))| -&gt; foo (bar (baz quux)|)</p>
+<p>  (bar (baz quux)) foo| -&gt; (bar (baz quux|)) foo ;; 2</p>
+<p>  foo (bar (baz (quux) blab))| -&gt; foo (bar (baz (quux|) blab)) ;; SPC u</p>
+<p>  (foo| (bar baz) quux) -&gt; (foo (bar baz) quux|)</p>
+<p>  (foo (bar baz) |quux blab) -&gt; (foo (bar baz) quux blab|) ;; SPC u SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-beginning-of-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-beginning-of-sexp &amp;optional ARG)
+</code></pre><p>  (foo (bar baz) quux| (blab glob)) -&gt; (|foo (bar baz) quux (blab glob))</p>
+<p>  (foo (bar baz|) quux (blab glob)) -&gt; (foo (|bar baz) quux (blab glob))</p>
+<p>  (|foo) (bar) (baz quux) -&gt; (foo) (bar) (|baz quux) ;; 3</p>
+<p>  (foo bar) (baz) (quux|) -&gt; (|foo bar) (baz) (quux) ;; -3</p>
+<p>  ((foo bar) (baz |quux) blab) -&gt; (|(foo bar) (baz quux) blab) ;; SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-end-of-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-end-of-sexp &amp;optional ARG)
+</code></pre><p>  (foo |(bar baz) quux (blab glob)) -&gt; (foo (bar baz) quux (blab glob)|)</p>
+<p>  (foo (|bar baz) quux (blab glob)) -&gt; (foo (bar baz|) quux (blab glob))</p>
+<p>  (|foo) (bar) (baz quux) -&gt; (foo) (bar) (baz quux|) ;; 3</p>
+<p>  (foo bar) (baz) (quux|) -&gt; (foo bar|) (baz) (quux) ;; -3</p>
+<p>  ((foo |bar) (baz quux) blab) -&gt; ((foo bar) (baz quux) blab|) ;; SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-beginning-of-next-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-beginning-of-next-sexp &amp;optional ARG)
+</code></pre><p>  (f|oo) (bar) (baz) -&gt; (foo) (|bar) (baz)</p>
+<p>  (f|oo) (bar) (baz) -&gt; (foo) (bar) (|baz) ;; 2</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-beginning-of-previous-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-beginning-of-previous-sexp &amp;optional ARG)
+</code></pre><p>  (foo) (b|ar) (baz) -&gt; (|foo) (bar) (baz)</p>
+<p>  (foo) (bar) (b|az) -&gt; (|foo) (bar) (baz) ;; 2</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-end-of-next-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-end-of-next-sexp &amp;optional ARG)
+</code></pre><p>  (f|oo) (bar) (baz) -&gt; (foo) (bar|) (baz)</p>
+<p>  (f|oo) (bar) (baz) -&gt; (foo) (bar) (baz|) ;; 2</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-end-of-previous-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-end-of-previous-sexp &amp;optional ARG)
+</code></pre><p>  (foo) (b|ar) (baz) -&gt; (foo|) (bar) (baz)</p>
+<p>  (foo) (bar) (b|az) -&gt; (foo|) (bar) (baz) ;; 2</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-up-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-up-sexp &amp;optional ARG INTERACTIVE)
+</code></pre><p>  (foo |(bar baz) quux blab) -&gt; (foo (bar baz) quux blab)|</p>
+<p>  (foo (bar |baz) quux blab) -&gt; (foo (bar baz) quux blab)| ;; 2</p>
+<p>  (foo bar |baz              -&gt; (foo bar baz)| ;; re-indent the expression
+&#x200B;   )</p>
+<p>  (foo  |(bar baz)           -&gt; (foo)| (bar baz) ;; close unbalanced expr.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-up-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-backward-up-sexp &amp;optional ARG INTERACTIVE)
+</code></pre><p>  (foo (bar baz) quux| blab) -&gt; |(foo (bar baz) quux blab)</p>
+<p>  (foo (bar |baz) quux blab) -&gt; |(foo (bar baz) quux blab) ;; 2</p>
+<p>  (                  -&gt; |(foo bar baz)
+&#x200B;    foo |bar baz)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp--kill-or-copy-region is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp--kill-or-copy-region BEG END &amp;optional DONT-KILL)
+</code></pre><p>Kill or copy region between BEG and END according to DONT-KILL.
+If &#x2018;evil-mode&#x2019; is active, copying a region will also add it to the 0 register.
+Additionally, if command was prefixed with a register, copy the region
+to that register.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-kill-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-kill-sexp &amp;optional ARG DONT-KILL)
+</code></pre><p> (foo |(abc) bar)  -&gt; (foo | bar) ;; nil, defaults to 1</p>
+<p> (foo (bar) | baz) -&gt; |           ;; 2</p>
+<p> (foo |(bar) baz)  -&gt; |           ;; SPC u SPC u</p>
+<p> (1 |2 3 4 5 6)    -&gt; (1|)        ;; SPC u</p>
+<p> (1 |2 3 4 5 6)    -&gt; (1 | 5 6)   ;; 3</p>
+<p> (1 2 3 4 5| 6)    -&gt; (1 2 3 | 6) ;; -2</p>
+<p> (1 2 3 4| 5 6)    -&gt; (|5 6)      ;; - SPC u</p>
+<p> (1 2 |   )        -&gt; (1 2|)      ;; SPC u, kill useless whitespace</p>
+<p> (1 2 3 |4 5 6)    -&gt; (|)         ;; 0</p>
+<p>Note: prefix argument is shown after the example in
+&quot;comment&quot;. Assumes &#x2018;sp-navigate-consider-symbols&#x2019; equal to t.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-kill-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-backward-kill-sexp &amp;optional ARG DONT-KILL)
+</code></pre><p>  (foo (abc)| bar)           -&gt; (foo | bar)</p>
+<p>  blab (foo (bar baz) quux)| -&gt; blab |</p>
+<p>  (1 2 3 |4 5 6)             -&gt; (|4 5 6) ;; SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-copy-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-copy-sexp &amp;optional ARG)
+</code></pre><p>Copy the following ARG expressions to the kill-ring.</p>
+<p>This is exactly like calling &#x2018;sp-kill-sexp&#x2019; with second argument
+t.  All the special prefix arguments work the same way.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-copy-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-backward-copy-sexp &amp;optional ARG)
+</code></pre><p>Copy the previous ARG expressions to the kill-ring.</p>
+<p>This is exactly like calling &#x2018;sp-backward-kill-sexp&#x2019; with second argument
+t.  All the special prefix arguments work the same way.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-clone-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-clone-sexp)
+</code></pre><p>Clone sexp after or around point.</p>
+<p>If the form immediately after point is a sexp, clone it below the
+current one and put the point in front of it.</p>
+<p>Otherwise get the enclosing sexp and clone it below the current
+enclosing sexp.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-kill-hybrid-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-kill-hybrid-sexp ARG)
+</code></pre><p>  foo | bar baz               -&gt; foo |               ;; nil</p>
+<p>  foo (bar | baz) quux        -&gt; foo (bar |) quux    ;; nil</p>
+<p>  foo | bar (baz              -&gt; foo |               ;; nil
+             quux)</p>
+<p>  foo &quot;bar |baz quux&quot; quack   -&gt; foo &quot;bar |&quot; quack   ;; nil</p>
+<p>  foo (bar
+       baz) qu|ux (quack      -&gt;   foo | hoo         ;; SPC u SPC u
+                   zaq) hoo</p>
+<p>  foo | (bar                  -&gt; foo |               ;; C-0
+         baz)                          baz)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-kill-whole-line is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-kill-whole-line)
+</code></pre><p>  (progn                    (progn
+    (some |long sexp))  -&gt;    |)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-transpose-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-transpose-sexp &amp;optional ARG)
+</code></pre><p>  foo |bar baz     -&gt; bar foo| baz</p>
+<p>  foo |bar baz     -&gt; bar baz foo| ;; 2</p>
+<p>  (foo) |(bar baz) -&gt; (bar baz) (foo)|</p>
+<p>  (foo bar)        -&gt;    (baz quux)   ;; keeps the formatting
+&#x200B;    |(baz quux)            |(foo bar)</p>
+<p>  foo bar baz|     -&gt; foo baz| bar ;; -1</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-transpose-hybrid-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-transpose-hybrid-sexp &amp;optional ARG)
+</code></pre><p>  foo bar            baz (quux
+  |baz (quux   -&gt;         quack)
+        quack)       foo bar\n|</p>
+<p>  [(foo) (bar) -&gt; [(baz)
+  |(baz)]          (foo) (bar)|]</p>
+<p>  foo bar baz  -&gt; quux flux
+  |quux flux      foo bar baz\n|</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-push-hybrid-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-push-hybrid-sexp)
+</code></pre><p>  |x = big_function_call(a,    |(a,
+                         b)      b) = read_user_input()
+                           -&gt;
+  (a,                          x = big_function_call(a,
+   b) = read_user_input()                            b)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-indent-adjust-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-indent-adjust-sexp)
+</code></pre><p>Add the hybrid sexp at line into previous sexp.  All forms
+between the two are also inserted.  Specifically, if the point is
+on empty line, move the closing delimiter there, so the next
+typed text will become the last item of the previous sexp.</p>
+<p>This acts similarly to &#x2018;sp-add-to-previous-sexp&#x2019; but with special
+handling of empty lines.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-dedent-adjust-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-dedent-adjust-sexp)
+</code></pre><p>Remove the hybrid sexp at line from previous sexp.  All
+sibling forms after it are also removed (not deleted, just placed
+outside of the enclosing list).  Specifically, if the point is on
+empty line followed by closing delimiter of enclosing list, move
+the closing delimiter after the last item in the list.</p>
+<p>This acts similarly to &#x2018;sp-forward-barf-sexp&#x2019; but with special
+handling of empty lines.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-slurp-hybrid-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-slurp-hybrid-sexp)
+</code></pre><p>Add hybrid sexp following the current list in it by moving the
+closing delimiter.</p>
+<p>This is philosophically similar to &#x2018;sp-forward-slurp-sexp&#x2019; but
+works better in &quot;line-based&quot; languages like C or Java.</p>
+<p>Because the structure is much looser in these languages, this
+command currently does not support all the prefix argument
+triggers that &#x2018;sp-forward-slurp-sexp&#x2019; does.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-forward-slurp-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>It is bound to C-).</p>
+<pre><code>(sp-forward-slurp-sexp &amp;optional ARG)
+</code></pre><p>  (foo |bar) baz        -&gt; (foo |bar baz)</p>
+<p>  [(foo |bar)] baz      -&gt; [(foo |bar) baz]</p>
+<p>  [(foo |bar) baz]      -&gt; [(foo |bar baz)]</p>
+<p>  ((|foo) bar baz quux) -&gt; ((|foo bar baz quux)) ;; with SPC u</p>
+<p>  &quot;foo| bar&quot; &quot;baz quux&quot; -&gt; &quot;foo| bar baz quux&quot;</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-slurp-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>It is bound to C-(.</p>
+<pre><code>(sp-backward-slurp-sexp &amp;optional ARG)
+</code></pre><p>  foo (bar| baz)        -&gt; (foo bar| baz)</p>
+<p>  foo [(bar| baz)]      -&gt; [foo (bar| baz)]</p>
+<p>  [foo (bar| baz)]      -&gt; [(foo bar| baz)]</p>
+<p>  (foo bar baz (|quux)) -&gt; ((foo bar baz |quux)) ;; with SPC u</p>
+<p>  &quot;foo bar&quot; &quot;baz |quux&quot; -&gt; &quot;foo bar baz |quux&quot;</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-add-to-previous-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-add-to-previous-sexp &amp;optional ARG)
+</code></pre><p>  (foo bar) |baz quux        -&gt; (foo bar |baz) quux</p>
+<p>  (foo bar) |baz quux        -&gt; (foo bar |baz quux) ;; 2</p>
+<p>  (blab (foo bar) |baz quux) -&gt; (blab (foo bar |baz quux)) ;; SPC u</p>
+<p>  (foo bar) (baz |quux)      -&gt; (foo bar (baz |quux)) ;; SPC u SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-add-to-next-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-add-to-next-sexp &amp;optional ARG)
+</code></pre><p>  foo bar| (baz quux)        -&gt; foo (bar| baz quux)</p>
+<p>  foo bar| (baz quux)        -&gt; (foo bar| baz quux) ;; 2</p>
+<p>  (foo bar |(bar quux) blab) -&gt; ((foo bar |bar quux) blab) ;; SPC u</p>
+<p>  (foo |bar) (baz quux)      -&gt; ((foo |bar) baz quux) ;; SPC u SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-forward-barf-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>It is bound to M-).</p>
+<pre><code>(sp-forward-barf-sexp &amp;optional ARG)
+</code></pre><p>  (foo bar| baz)   -&gt; (foo bar|) baz   ;; nil (defaults to 1)</p>
+<p>  (foo| [bar baz]) -&gt; (foo|) [bar baz] ;; 1</p>
+<p>  (1 2 3| 4 5 6)   -&gt; (1 2 3|) 4 5 6   ;; SPC u (or numeric prefix 3)</p>
+<p>  (foo bar| baz)   -&gt; foo (bar| baz)   ;; -1</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-barf-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>It is bound to M-(.</p>
+<pre><code>(sp-backward-barf-sexp &amp;optional ARG)
+</code></pre><p>  (foo bar| baz) -&gt; foo (bar| baz)</p>
+<p>  ([foo bar] |baz) -&gt; [foo bar] (|baz)</p>
+<p>  (1 2 3 |4 5 6) -&gt; 1 2 3 (|4 5 6) ;; SPC u (or 3)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-skip-forward-to-symbol is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-skip-forward-to-symbol &amp;optional STOP-AT-STRING STOP-AFTER-STRING
+STOP-INSIDE-STRING)
+</code></pre><p>  foo|   bar -&gt; foo   |bar</p>
+<p>  foo|   [bar baz] -&gt; foo   |[bar baz]</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-skip-backward-to-symbol is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-skip-backward-to-symbol &amp;optional STOP-AT-STRING STOP-AFTER-STRING
+STOP-INSIDE-STRING)
+</code></pre><p>  foo   |bar -&gt; foo|   bar</p>
+<p>  [bar baz]   |foo -&gt; [bar baz]|   foo</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-forward-symbol is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-forward-symbol &amp;optional ARG)
+</code></pre><p>  |foo bar baz          -&gt; foo| bar baz</p>
+<p>  |foo (bar (baz))      -&gt; foo (bar| (baz)) ;; 2</p>
+<p>  |foo (bar (baz) quux) -&gt; foo (bar (baz) quux|) ;; 4</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-symbol is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-backward-symbol &amp;optional ARG)
+</code></pre><p>  foo bar| baz            -&gt; foo |bar baz</p>
+<p>  ((foo bar) baz)|        -&gt; ((foo |bar) baz) ;; 2</p>
+<p>  (quux ((foo) bar) baz)| -&gt; (|quux ((foo) bar) baz) ;; 4</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-rewrap-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-rewrap-sexp PAIR &amp;optional KEEP-OLD)
+</code></pre><p>  (foo |bar baz) -&gt; [foo |bar baz]   ;; [</p>
+<p>  (foo |bar baz) -&gt; [(foo |bar baz)] ;; SPC u [</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-swap-enclosing-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-swap-enclosing-sexp &amp;optional ARG)
+</code></pre><p>  (foo [|bar] baz)              -&gt; [foo (|bar) baz] ;; 1</p>
+<p>  (foo {bar [|baz] quux} quack) -&gt; [foo {bar (|baz) quux} quack] ;; 2</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-change-inner is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<pre><code>(sp-change-inner)
+</code></pre><p>  (f|oo [bar] baz) -&gt; (foo [|] baz)</p>
+<p>  {|&#x2019;foo&#x2019;: &#x2019;bar&#x2019;}  -&gt; {&#x2019;|&#x2019;: &#x2019;bar&#x2019;}</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-unwrap-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-unwrap-sexp &amp;optional ARG)</p>
+<p>  |(foo bar baz)     -&gt; |foo bar baz</p>
+<p>  (foo bar| baz)     -&gt; foo bar| baz</p>
+<p>  |(foo) (bar) (baz) -&gt; |(foo) bar (baz) ;; 2</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-unwrap-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-backward-unwrap-sexp &amp;optional ARG)</p>
+<p>  (foo bar baz)|     -&gt; foo bar baz|</p>
+<p>  (foo bar)| (baz)   -&gt; foo bar| (baz)</p>
+<p>  (foo) (bar) (baz)| -&gt; foo (bar) (baz) ;; 3</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-splice-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-splice-sexp &amp;optional ARG)</p>
+<p>  (foo (bar| baz) quux) -&gt; (foo bar| baz quux)</p>
+<p>  (foo |(bar baz) quux) -&gt; foo |(bar baz) quux</p>
+<p>  (foo (bar| baz) quux) -&gt; foo (bar| baz) quux ;; 2</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-splice-sexp-killing-backward is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-splice-sexp-killing-backward &amp;optional ARG)</p>
+<p>  (foo (let ((x 5)) |(sqrt n)) bar)  -&gt; (foo |(sqrt n) bar)</p>
+<p>&#x200B;  (when ok|                             |(perform-operation-1)
+&#x200B;    (perform-operation-1)            -&gt;  (perform-operation-2)
+&#x200B;    (perform-operation-2))</p>
+<p>&#x200B;  (save-excursion                    -&gt; |(awesome-stuff-happens) ;; 2
+&#x200B;    (unless (test)
+&#x200B;      |(awesome-stuff-happens)))</p>
+<p>Note that to kill only the content and not the enclosing
+delimiters you can use SPC u M-x sp-backward-kill-sexp.
+See &#x2018;sp-backward-kill-sexp&#x2019; for more information.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-splice-sexp-killing-forward is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-splice-sexp-killing-forward &amp;optional ARG)</p>
+<p>  (a (b c| d e) f) -&gt; (a b c| f)</p>
+<p>  (+ (x |y z) w)   -&gt; (+ x| w)</p>
+<p>Note that to kill only the content and not the enclosing
+delimiters you can use SPC u M-x sp-kill-sexp.
+See &#x2018;sp-kill-sexp&#x2019; for more information.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-raise-sexp is an alias for &#x2018;sp-splice-sexp-killing-around&#x2019; in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-raise-sexp &amp;optional ARG)</p>
+<p>  (a b |(c d) e f)      -&gt; |(c d)     ;; with arg = 1</p>
+<p>  (a b |c d e f)        -&gt; |c d       ;; with arg = 2</p>
+<p>  (- (car x) |a 3)      -&gt; (car x)|   ;; with arg = -1</p>
+<p>  (foo (bar |baz) quux) -&gt; |(bar baz) ;; with arg = SPC u SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-convolute-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-convolute-sexp &amp;optional ARG)</p>
+<p>We want to move the &#x2018;while&#x2019; before the &#x2018;let&#x2019;.</p>
+<p>&#x200B;  (let ((stuff 1)             (while (we-are-good)
+&#x200B;        (other 2))              (let ((stuff 1)
+&#x200B;    (while (we-are-good)  -&gt;          (other 2))
+&#x200B;     |(do-thing 1)               |(do-thing 1)
+&#x200B;      (do-thing 2)                (do-thing 2)
+&#x200B;      (do-thing 3)))              (do-thing 3)))</p>
+<p>  (forward-char (sp-get env |:op-l)) -&gt; (sp-get env (forward-char |:op-l))</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-absorb-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-absorb-sexp &amp;optional ARG)</p>
+<p>&#x200B;  (do-stuff 1)         (save-excursion
+&#x200B;  (save-excursion  -&gt;   |(do-stuff 1)
+&#x200B;   |(do-stuff 2))        (do-stuff 2))</p>
+<p>  foo bar (concat |baz quux) -&gt; (concat |foo bar baz quux) ;; 2</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-emit-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-emit-sexp &amp;optional ARG)</p>
+<p>&#x200B;  (save-excursion     &#x200B;(do-stuff 1)
+&#x200B;    (do-stuff 1)      (do-stuff 2)
+&#x200B;    (do-stuff 2)  -&gt;  (save-excursion
+&#x200B;   |(do-stuff 3))      |(do-stuff 3))</p>
+<p>&#x200B;  (while not-done-yet       (execute-only-once)
+&#x200B;    (execute-only-once) -&gt;  (while not-done-yet    ;; arg = 2
+&#x200B;   |(execute-in-loop))       |(execute-in-loop))</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-extract-before-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-extract-before-sexp &amp;optional ARG)</p>
+<p>Move the expression after point before the enclosing balanced expression.</p>
+<p>The point moves with the extracted expression.</p>
+<p>With ARG positive N, extract N expressions after point.</p>
+<p>With ARG negative -N, extract N expressions before point.</p>
+<p>With ARG being raw prefix argument SPC u, extract all the expressions
+up until the end of enclosing list.</p>
+<p>If the raw prefix is negative, this behaves as SPC u &#x2018;sp-backward-barf-sexp&#x2019;.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-extract-after-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-extract-after-sexp &amp;optional ARG)</p>
+<p>Move the expression after point after the enclosing balanced expression.</p>
+<p>The point moves with the extracted expression.</p>
+<p>With ARG positive N, extract N expressions after point.</p>
+<p>With ARG negative -N, extract N expressions before point.</p>
+<p>With ARG being raw prefix argument SPC u, extract all the
+expressions up until the end of enclosing list.</p>
+<p>With ARG being negative raw prefix argument M-- SPC u, extract all the
+expressions up until the start of enclosing list.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-forward-whitespace is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-forward-whitespace &amp;optional ARG)</p>
+<p>Skip forward past the whitespace characters.
+With non-nil ARG return number of characters skipped.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-whitespace is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-backward-whitespace &amp;optional ARG)</p>
+<p>Skip backward past the whitespace characters.
+With non-nil ARG return number of characters skipped.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-split-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>It is bound to SPC j s, M-m j s.</p>
+<p>(sp-split-sexp ARG)</p>
+<p>  (foo bar |baz quux)   -&gt; (foo bar) |(baz quux)</p>
+<p>  &quot;foo bar |baz quux&quot;   -&gt; &quot;foo bar&quot; |&quot;baz quux&quot;</p>
+<p>  ([foo |bar baz] quux) -&gt; ([foo] |[bar baz] quux)</p>
+<p>  (foo bar| baz quux) -&gt; (foo) (bar|) (baz) (quux) ;; SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-join-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-join-sexp &amp;optional ARG)</p>
+<p>  (foo bar) |(baz)                    -&gt; (foo bar |baz)</p>
+<p>  (foo) |(bar) (baz)                  -&gt; (foo |bar baz) ;; 2</p>
+<p>  [foo] [bar] |[baz]                  -&gt; [foo bar |baz] ;; -2</p>
+<p>  (foo bar (baz)| (quux) (blob bluq)) -&gt; (foo bar (baz| quux blob bluq)) ;; SPC u</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-select-next-thing is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-select-next-thing &amp;optional ARG POINT)</p>
+<p>Set active region over next thing as recognized by &#x2018;sp-get-thing&#x2019;.</p>
+<p>If ARG is positive N, select N expressions forward.</p>
+<p>If ARG is negative -N, select N expressions backward.</p>
+<p>If ARG is a raw prefix SPC u select all the things up until the
+end of current expression.</p>
+<p>If ARG is a raw prefix SPC u SPC u select the current expression (as
+if doing &#x2018;sp-backward-up-sexp&#x2019; followed by
+&#x2018;sp-select-next-thing&#x2019;).</p>
+<p>If ARG is number 0 (zero), select all the things inside the
+current expression.</p>
+<p>If POINT is non-nil, it is assumed it&#x2019;s a point inside the buffer
+from which the selection extends, either forward or backward,
+depending on the value of ARG.</p>
+<p>If the currently active region contains a balanced expression,
+following invocation of &#x2018;sp-select-next-thing&#x2019; will select the
+inside of this expression .  Therefore calling this function
+twice with no active region will select the inside of the next
+expression.</p>
+<p>If the point is right in front of the expression any potential
+prefix is ignored.  For example, &#x2019;|(foo) would only select (foo)
+and not include &#x2019; in the selection.  If you wish to also select
+the prefix, you have to move the point backwards.</p>
+<p>With &#x2018;sp-navigate-consider-symbols&#x2019; symbols and strings are also
+considered balanced expressions.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-select-previous-thing is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-select-previous-thing &amp;optional ARG POINT)</p>
+<p>Set active region over ARG previous things as recognized by &#x2018;sp-get-thing&#x2019;.</p>
+<p>If ARG is negative -N, select that many expressions forward.</p>
+<p>With &#x2018;sp-navigate-consider-symbols&#x2019; symbols and strings are also
+considered balanced expressions.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-select-next-thing-exchange is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-select-next-thing-exchange &amp;optional ARG POINT)</p>
+<p>Just like &#x2018;sp-select-next-thing&#x2019; but run &#x2018;exchange-point-and-mark&#x2019; afterwards.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-select-previous-thing-exchange is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-select-previous-thing-exchange &amp;optional ARG POINT)</p>
+<p>Just like &#x2018;sp-select-previous-thing&#x2019; but run &#x2018;exchange-point-and-mark&#x2019; afterwards.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-mark-sexp is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-mark-sexp &amp;optional ARG ALLOW-EXTEND)</p>
+<p>Set mark ARG balanced expressions from point.
+The place mark goes is the same place M-x sp-forward-sexp would
+move to with the same argument.
+Interactively, if this command is repeated
+or (in Transient Mark mode) if the mark is active,
+it marks the next ARG sexps after the ones already marked.
+This command assumes point is not in a string or comment.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-delete-char is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-delete-char &amp;optional ARG)</p>
+<p> (quu|x &quot;zot&quot;) -&gt; (quu| &quot;zot&quot;)</p>
+<p> (quux |&quot;zot&quot;) -&gt; (quux &quot;|zot&quot;) -&gt; (quux &quot;|ot&quot;)</p>
+<p> (foo (|) bar) -&gt; (foo | bar)</p>
+<p> |(foo bar) -&gt; (|foo bar)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-delete-char is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-backward-delete-char &amp;optional ARG)</p>
+<p> (&quot;zot&quot; q|uux) -&gt; (&quot;zot&quot; |uux)</p>
+<p> (&quot;zot&quot;| quux) -&gt; (&quot;zot|&quot; quux) -&gt; (&quot;zo|&quot; quux)</p>
+<p> (foo (|) bar) -&gt; (foo | bar)</p>
+<p> (foo bar)| -&gt; (foo bar|)</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-kill-symbol is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-kill-symbol &amp;optional ARG WORD)</p>
+<p>Kill a symbol forward, skipping over any intervening delimiters.</p>
+<p>With ARG being positive number N, repeat that many times.</p>
+<p>With ARG being Negative number -N, repeat that many times in
+backward direction.</p>
+<p>See &#x2018;sp-forward-symbol&#x2019; for what constitutes a symbol.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-kill-word is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-kill-word &amp;optional ARG)</p>
+<p>Kill a word forward, skipping over intervening delimiters.</p>
+<p>With ARG being positive number N, repeat that many times.</p>
+<p>With ARG being Negative number -N, repeat that many times in
+backward direction.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-delete-symbol is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-delete-symbol &amp;optional ARG WORD)</p>
+<p>Delete a symbol forward, skipping over any intervening delimiters.</p>
+<p>Deleted symbol does not go to the clipboard or kill ring.</p>
+<p>With ARG being positive number N, repeat that many times.</p>
+<p>With ARG being Negative number -N, repeat that many times in
+backward direction.</p>
+<p>See &#x2018;sp-forward-symbol&#x2019; for what constitutes a symbol.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-delete-word is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-delete-word &amp;optional ARG)</p>
+<p>Delete a word forward, skipping over intervening delimiters.</p>
+<p>Deleted word does not go to the clipboard or kill ring.</p>
+<p>With ARG being positive number N, repeat that many times.</p>
+<p>With ARG being Negative number -N, repeat that many times in
+backward direction.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-kill-symbol is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-backward-kill-symbol &amp;optional ARG WORD)</p>
+<p>Kill a symbol backward, skipping over any intervening delimiters.</p>
+<p>With ARG being positive number N, repeat that many times.</p>
+<p>With ARG being Negative number -N, repeat that many times in
+forward direction.</p>
+<p>See &#x2018;sp-backward-symbol&#x2019; for what constitutes a symbol.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-kill-word is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-backward-kill-word &amp;optional ARG)</p>
+<p>Kill a word backward, skipping over intervening delimiters.</p>
+<p>With ARG being positive number N, repeat that many times.</p>
+<p>With ARG being Negative number -N, repeat that many times in
+backward direction.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-delete-symbol is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-backward-delete-symbol &amp;optional ARG WORD)</p>
+<p>Delete a symbol backward, skipping over any intervening delimiters.</p>
+<p>Deleted symbol does not go to the clipboard or kill ring.</p>
+<p>With ARG being positive number N, repeat that many times.</p>
+<p>With ARG being Negative number -N, repeat that many times in
+forward direction.</p>
+<p>See &#x2018;sp-backward-symbol&#x2019; for what constitutes a symbol.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-backward-delete-word is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-backward-delete-word &amp;optional ARG)</p>
+<p>Delete a word backward, skipping over intervening delimiters.</p>
+<p>Deleted word does not go to the clipboard or kill ring.</p>
+<p>With ARG being positive number N, repeat that many times.</p>
+<p>With ARG being Negative number -N, repeat that many times in
+backward direction.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-delete-region is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-delete-region BEG END)</p>
+<p>Delete the text between point and mark, like &#x2018;delete-region&#x2019;.</p>
+<p>BEG and END are the bounds of region to be deleted.</p>
+<p>If that text is unbalanced, signal an error instead.
+With a prefix argument, skip the balance check.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-kill-region is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-kill-region BEG END)</p>
+<p>Kill the text between point and mark, like &#x2018;kill-region&#x2019;.</p>
+<p>BEG and END are the bounds of region to be killed.</p>
+<p>If that text is unbalanced, signal an error instead.
+With a prefix argument, skip the balance check.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-indent-defun is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-indent-defun &amp;optional ARG)</p>
+<p>Reindent the current defun.</p>
+<p>If point is inside a string or comment, fill the current
+paragraph instead, and with ARG, justify as well.</p>
+<p>Otherwise, reindent the current defun, and adjust the position
+of the point.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-region-ok-p is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-region-ok-p START END)</p>
+<p>Test if region between START and END is balanced.</p>
+<p>A balanced region is one where all opening delimiters are matched
+by closing delimiters.</p>
+<p>This function does <em>not</em> check that the delimiters are correctly
+ordered, that is [(]) is correct even though it is not logically
+properly balanced.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-newline is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>It is bound to SPC j n, M-m j n.</p>
+<p>(sp-newline)</p>
+<p>Insert a newline and indent it.</p>
+<p>This is like &#x2018;newline-and-indent&#x2019;, but it not only indents the
+line that the point is on but also the S-expression following the
+point, if there is one.</p>
+<p>If in a string, just insert a literal newline.</p>
+<p>If in a comment and if followed by invalid structure, call
+&#x2018;indent-new-comment-line&#x2019; to keep the invalid structure in a
+comment.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-comment is an interactive compiled Lisp function in &#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-comment)</p>
+<p>Insert the comment character and adjust hanging sexps such
+  that it doesn&#x2019;t break structure.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-show-enclosing-pair is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-show-enclosing-pair)</p>
+<p>Highlight the enclosing pair around point.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+<p>sp-highlight-current-sexp is an interactive compiled Lisp function in
+&#x2018;smartparens.el&#x2019;.</p>
+<p>(sp-highlight-current-sexp ARG)</p>
+<p>Highlight the expression returned by the next command, preserving point position.</p>
+<p>&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;&#x2015;</p>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="smartparens-strict-mode.html" class="navigation navigation-prev " aria-label="Previous page: Smartparens Strict Mode">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="lisp-state.html" class="navigation navigation-next " aria-label="Next page: Lisp State">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Smartparens cheetsheet","level":"1.12.1.2","depth":3,"next":{"title":"Lisp State","level":"1.12.2","depth":2,"path":"structured-editing/lisp-state.md","ref":"structured-editing/lisp-state.md","articles":[{"title":"Wrap Unwrap","level":"1.12.2.1","depth":3,"path":"structured-editing/lisp-state-wrap-unwrap.md","ref":"structured-editing/lisp-state-wrap-unwrap.md","articles":[]},{"title":"Slurp Barf","level":"1.12.2.2","depth":3,"path":"structured-editing/lisp-state-slurp-barf.md","ref":"structured-editing/lisp-state-slurp-barf.md","articles":[]},{"title":"Deleting","level":"1.12.2.3","depth":3,"path":"structured-editing/lisp-state-deleting.md","ref":"structured-editing/lisp-state-deleting.md","articles":[]},{"title":"Splicing","level":"1.12.2.4","depth":3,"path":"structured-editing/lisp-state-splicing.md","ref":"structured-editing/lisp-state-splicing.md","articles":[]}]},"previous":{"title":"Smartparens Strict Mode","level":"1.12.1.1","depth":3,"path":"structured-editing/smartparens-strict-mode.md","ref":"structured-editing/smartparens-strict-mode.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","klipse","sectionx","toggle-chapters","toolbar","youtube"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"shortName":"spacemacs-practicalli","useIdentifier":false},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"ga":{"token":"UA-28030709-9","configuration":"auto"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Gitter Chat","icon":"fa fa-comments-o","url":"https://gitter.im/practicalli/chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli"},{"label":"Search page title on StackOverflow","icon":"fa fa-stack-overflow","url":"http://stackoverflow.com/search?q={{title}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs":"http://spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"structured-editing/smartparens-cheet-sheet.md","mtime":"2018-07-29T11:14:22.507Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2018-11-02T14:21:27.428Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-codeblock-disable-glossary/disable-glossary.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-gist/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
